@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         operating-system: [ubuntu-latest, macOS-latest, windows-latest]
-        go: ["1.18", "1.17", "1.16", "1.15", "1.14"]
+        go: ['1.18', '1.17', '1.16', '1.15']
     name: Go ${{ matrix.go }} Build on ${{ matrix.operating-system }}
 
     steps:
@@ -35,5 +35,5 @@ jobs:
 
       - name: run with testify
         run: |
-          go mod tidy -go=${{ matrix.go }}
+          go mod tidy
           go test -v ./...
