@@ -2,7 +2,11 @@ name: GO CI
 
 on:
   push:
+    paths:
+      - 'src/**'
   pull_request:
+    paths:
+      - 'src/**'
 
   # schedule:
   #   # weekly build every FRI
